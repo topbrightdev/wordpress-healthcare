@@ -489,6 +489,10 @@ class HPN_Theme {
 
 			$wp_menu = wp_get_nav_menu_items($id);
 
+			if ( !$wp_menu ) {
+				return;
+			}
+
 			$return = array();
 
 			foreach ($wp_menu as $item) {
