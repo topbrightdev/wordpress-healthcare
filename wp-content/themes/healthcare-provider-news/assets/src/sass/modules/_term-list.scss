@@ -1,0 +1,40 @@
+.term-list {
+	margin-bottom: pad('lg');
+
+	&__item {
+		position: relative;
+		margin-bottom: .5rem;
+	}
+
+	&__icon {
+		display: block;
+		position: absolute;
+		top: 12px;
+		left: 8px;
+		height: 24px;
+		width: 24px;
+
+		svg {
+			height: 100%;
+			width: 100%;
+			fill: color('primary-md');
+		}
+		
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		padding: pad('sm') pad('sm') pad('sm') 2.5em;
+		border: 1px solid color('secondary-lt');
+		border-radius: 3px;
+		transition: background .25s ease;
+
+		&:hover, &:focus {
+			background-color: color('secondary-lt');
+
+			svg { fill: color('primary'); }
+		}
+	}
+
+}

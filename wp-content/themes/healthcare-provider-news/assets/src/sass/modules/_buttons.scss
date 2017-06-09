@@ -1,0 +1,73 @@
+.btn {
+	position: relative;
+	display: inline-block;
+	padding: pad('sm') pad('md');
+	margin-bottom: pad('xs');
+	font-size: 1em;
+	color: #ffffff;
+	background-color: color('secondary');
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: background 0.25s ease;
+	
+	&__icon {
+		position: absolute;
+		top: 9px;
+		height: 30px;
+		width: 30px;
+		fill: #ffffff;
+	}
+
+	&:hover, &:focus {
+		background-color: color('secondary-md');
+		color: #ffffff;
+	}
+
+	&--sm {
+		padding: 0.5rem 1rem;
+		font-size: 0.8em;
+	}
+
+	&--sm &__icon {
+		top: 5px;
+		height: 20px;
+		width: 20px;
+	}
+
+	&--icon-left {
+		padding-left: 52px;
+		padding-right: 1.5em;
+	}
+
+	&--icon-left &__icon { left: 15px; }
+
+	&--icon-right { padding-right: 40px; }
+
+	&--icon-right &__icon { right: 10px; }
+
+	&--lt &__icon { fill: color('secondary'); }
+
+	&--lt {
+		background-color: color('secondary-lt');
+		color: color('secondary');
+
+		&:hover, &:focus {
+			background-color: color('secondary-md');
+			color: #ffffff;
+		}
+	}
+
+	&--white &__icon { fill: color('secondary'); }
+
+	&--white {
+		background-color: #ffffff;
+		color: color('secondary');
+
+		&:hover, &:focus {
+			background-color: color('secondary-lt');
+			color: #ffffff;
+		}
+	}
+
+}

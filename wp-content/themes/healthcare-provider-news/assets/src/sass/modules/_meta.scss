@@ -1,0 +1,47 @@
+.title-meta {
+
+	&__date {
+		display: block;
+		margin-bottom: pad('xs');
+	}
+
+	&__category {
+		display: block;
+
+		svg {
+			display: inline-block;
+			height: 1.2em;
+			width: 1.2em;
+			margin-top: -5px;
+			vertical-align: middle;
+			fill: color('secondary');
+		}
+
+		&:hover, &:focus { text-decoration: underline; }
+	}
+
+	@include for-tablet-landscape-up() {
+
+		&__date,
+		&__category {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+
+		&__category { margin-left: pad('md'); }
+
+	}
+
+}
+
+.meta-close {
+	margin-top: pad('md');
+	padding-top: pad('sm');
+	border-top: 1px solid color('rule');
+}
+
+.meta-byline {
+	font-style: italic;
+	margin-top: pad('sm');
+	color: color('text-lt');
+}

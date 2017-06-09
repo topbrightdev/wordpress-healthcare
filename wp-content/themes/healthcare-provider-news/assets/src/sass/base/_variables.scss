@@ -1,0 +1,56 @@
+$font-family-body: 'Open Sans', sans-serif;
+$font-family-head: $font-family-body;
+
+$colors: (
+  primary: #005AA1,
+  primary-md: #6CA0C9,
+  primary-lt: #D5E4F0,
+  secondary: #00825F,
+  secondary-md: #6CB7A3,
+  secondary-lt: #E2F1ED,
+  text: #373737,
+  text-md: #747474,
+  text-lt: #B3B3B3,
+  warning: #BB5555,
+  rule: #D9D9D9,
+);
+
+
+$pad: (
+  xs: .5rem,
+  sm: 1rem,
+	md: 2rem,
+	lg: 3rem,
+	xl: 4rem
+);
+
+$max-site-width: 1100px;
+
+$susy: (
+  // flow: ltr,
+  // math: fluid,
+  // output: float,
+  // gutter-position: after,
+  container: $max-site-width,
+  // container-position: center,
+  columns: 12,
+  gutters: .5,
+  // column-width: false,
+  global-box-sizing: border-box,
+  // last-flow: to,
+  /*
+  debug: (
+    image: show,
+    color: rgba(#66f, .25),
+    output: overlay,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+	*/
+);

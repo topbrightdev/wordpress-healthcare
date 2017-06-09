@@ -1,0 +1,20 @@
+.layout-a {
+	@include container();
+
+	&__featured { }
+
+	&__content { }
+
+	&__sidebar { }
+
+	@include for-tablet-landscape-up() {
+
+		&__content { @include container(); }
+
+		&__body { @include span(8.5 of 12); }
+
+		&__sidebar { @include span(3.5 of 12 last); }
+
+	}
+
+}

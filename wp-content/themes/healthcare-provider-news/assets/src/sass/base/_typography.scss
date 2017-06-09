@@ -1,0 +1,124 @@
+body { font-family: $font-family-body; }
+
+.h1, .h2, .h3, .h4 {
+	font-family: $font-family-head;
+	font-weight: 700;
+	line-height: 130%;
+}
+
+.h1 { font-size: 1.6em; }
+.h2 { font-size: 1.3em; }
+.h3 { font-size: 1.1em; }
+.h4 { font-size: 1.0em; }
+
+.h1 .icon {
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+	vertical-align: middle;
+	margin-bottom: 7px;
+}
+
+.p {
+	font-size: 1.0em;
+	line-height: 140%;
+}
+
+.lead {
+	font-size: 1.2em;
+	line-height: 140%;
+}
+
+b, strong { font-weight: 700; }
+
+i, em { font-style: italic; }
+
+.wysiwyg {
+	@include pull-up-down-content();
+	overflow: hidden;
+	
+	p {
+		@extend .p;
+		margin: pad('sm') 0;
+	}
+
+	p, li { line-height: 150%; }
+
+	h1 { @extend .h2; }
+	h2 { @extend .h2; }
+	h3 { @extend .h3; }
+	h4 { @extend .h4; }
+
+	h2, h3, h4 { margin-top: pad('md'); }
+
+	blockquote p {
+		@extend .lead;
+		margin: pad('md') 0 pad('md') pad('sm');
+		padding-left: pad('sm');
+		padding-right: pad('md');
+		border-left: 2px solid color('text-lt');
+		font-style: italic;
+		color: color('text-md');
+	}
+
+	ul, ol {
+		@extend .p;
+		margin: pad('sm') 0 pad('sm') pad('md');
+	}
+
+	.well ul, .well ol {
+		margin-left: 1.5rem;
+	}
+
+	ul { list-style: disc; }
+
+	ol { list-style: decimal; }
+
+	ul li, ol li { margin-bottom: pad('sm'); }
+
+	ul ul, ol ol { font-size: 100%; }
+
+	p a, li a {
+		border-bottom: 1px solid color('secondary-md');
+		background-color: rgba(255,255,255,0);
+		transition: background .25s ease;
+	}
+
+	p a:hover, p a:focus,
+	li a:hover, li a:focus {
+		background-color: color('secondary-lt');
+		border-bottom: 1px solid color('secondary');
+	}
+ 
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	table {
+		width: 100%;
+		margin: pad('md') 0;
+	}
+	
+	table tr td { padding: 5px; }
+
+}
+
+
+@include for-tablet-landscape-up() {
+	
+	.h1 {
+		font-size: 2.5em;
+		line-height: 120%;
+		letter-spacing: -1px;
+
+		&--single { max-width: span(9); }
+	}
+	
+	.h2 { font-size: 2.0em; }
+	.h3 { font-size: 1.6em; }
+	.h4 { font-size: 1.1em; }
+	.p { font-size: 1.1em; }
+	.lead { font-size: 1.3em; }
+
+}

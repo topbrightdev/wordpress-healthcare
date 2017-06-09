@@ -1,0 +1,181 @@
+.header {
+	@include container();
+	position: relative;
+	width: 100%;
+	margin: pad('sm') auto pad('lg');
+
+	.home & {
+		margin-bottom: pad('lg');
+	}
+
+	&__logo {
+		@include span(7 of 12);
+
+		a {
+			display: block;
+			max-width: 300px;
+		
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+
+	}
+
+	&__utility-nav {
+		@include span(5 of 12 last);
+	}
+
+	&__search {
+		display: none;
+		padding: pad('xs') 0 0;
+		margin-bottom: pad('sm');
+	}
+
+	&.show-search { height: 150px; }
+
+	&.show-search &__search { display: block; }
+
+}
+
+.header-menu {
+	float: right;
+
+	&__item {
+		float: left;
+		margin-left: pad('xs');
+
+		&:first-child { margin: 0; }
+	}
+}
+
+#utility-nav-logout,
+#utility-nav-feedback {
+	display: none;
+}
+
+
+@include for-big-phone-only() {
+
+	.header {
+		@include container();
+
+		.home & {
+			margin-bottom: 1.5rem;
+		}
+
+		&__logo {
+			@include span(12 of 12);
+
+			a { margin: 0 auto; }
+		
+		}
+
+		&__utility-nav {
+			@include clearfix();
+			width: 100%;
+			float: none;
+			margin-bottom: pad('md');
+		}
+
+	}
+
+	.header-menu {
+		width: 100%;
+		float: none;
+	}
+
+	#utility-nav-menu-toggle {
+		float: right;
+	}
+
+}
+
+
+@include for-small-phone-only() {
+
+
+	.header__utility-nav { margin-bottom: 1.5em; }
+
+}
+
+
+@include for-tablet-landscape-up() {
+
+	.header {
+		@include container();
+		height: 100px;
+		padding-top: 0;
+		margin-top: 0;
+		margin-bottom: pad('xl');
+		max-width: none;
+
+		.home & {
+			margin-bottom: pad('xl');
+		}
+
+		&__logo {
+			position: absolute;
+			top: auto;
+			bottom: 0;
+			left: 0;
+			width: 340px;
+			max-width: none;
+
+			a {
+				margin: 0;
+				max-width: inherit;
+			}
+
+		}
+
+		&__search {
+			display: block;
+			position: absolute;
+			top: auto;
+			left: auto;
+			right: 0;
+			bottom: 0;
+			width: 365px;
+			max-width: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		&__utility-nav {
+			position: absolute;
+			top: 10px;
+			right: 0;
+			width: auto;
+			max-width: none;
+			padding-top: 0;
+		}
+
+	}
+
+	.header-menu {
+		float: right;
+		
+		&__item {
+			display: block;
+			float: left;
+			margin-right: 1em;
+
+			&:last-child { margin: 0; }
+		}
+
+	}
+
+	#utility-nav-menu-toggle,
+	#utility-nav-search {
+		display: none;
+	}
+
+	#utility-nav-logout,
+	#utility-nav-feedback {
+		display: block;
+	}
+
+}

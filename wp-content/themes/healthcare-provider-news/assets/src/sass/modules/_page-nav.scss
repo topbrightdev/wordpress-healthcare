@@ -1,0 +1,27 @@
+.page-nav li a,
+.page-nav li a:hover,
+.page-nav li.active a,
+.page-nav li.disabled {
+	color: #fff;
+	text-decoration:none;
+}
+
+.page-nav li {
+	display: inline;
+}
+
+.page-nav li a,
+.page-nav li a:hover,
+.page-nav li.active a,
+.page-nav li.disabled {
+	background-color: #6FB7E9;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 12px;
+	padding: 0.75rem;
+}
+
+.page-nav li a:hover,
+.page-nav li.active a {
+	background-color: #3C8DC5;
+}

@@ -1,0 +1,84 @@
+input, select {
+	font-size: 1em;
+	-webkit-appearance: none;
+  border-radius:0;
+}
+
+.search-form {
+	position: relative;
+	width: 100%;
+	height: 30px;
+
+	&__text-input {
+		z-index: 1;
+		position: relative;
+		width: 100%;
+		height: 30px;
+		background: none;
+		padding-right: 35px;
+		border: none;
+		border-bottom: 1px solid #ccc;
+		outline-width: 0;
+		transition: all .5s ease;
+
+		&::placeholder {
+			color: #ccc;
+			font-style: italic;
+		}
+
+		&:focus {
+			border-color: color('primary');
+			color: #000;
+		}
+	}
+
+	&__submit-label {
+		z-index: 2;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 29px;
+		width: 29px;
+	}
+
+	&__icon,
+	&__button {
+		z-index: 2;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	&__icon {
+		opacity: .3;
+		width: 90%;
+		height: 90%;
+	}
+
+	&__button {
+		z-index: 1;
+		border: none;
+		background-color: #ffffff;
+		text-indent: -9999em;
+		text-transform: uppercase;
+	}
+
+}
+
+.gform_wrapper {
+
+	button,
+	input[type=submit] {
+		@extend .btn;
+	}
+
+}
+
+.gf_browser_ie.gform_wrapper .gform_footer input.button {
+	padding: pad('sm') pad('md');
+}

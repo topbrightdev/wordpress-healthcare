@@ -1,0 +1,38 @@
+.catbar {
+	@include clearfix();
+	position: relative;
+	background-color: color('text');
+	color: #ffffff;
+	text-transform: uppercase;
+
+	&__head,
+	&__more {
+		display: block;
+		padding: 0.5rem 0.6rem;
+		line-height: 100%;
+	}
+
+	&__head {
+		float: left;
+		max-width: 400px;
+	  white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;		
+	}
+
+	&__more {
+		float: right;
+		color: #ffffff;
+		background-color: color('secondary');
+		transition: background .5s ease;
+
+		&:hover, &:focus { background-color: color('secondary-md'); }
+	}
+
+
+	@media (max-width: 375px) {
+		&__head { max-width: 70%; }
+	}
+
+
+}

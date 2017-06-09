@@ -1,0 +1,18 @@
+body {
+  background-color: #ffffff;
+  
+  &.menu-visible { position: fixed; }
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: color('secondary');
+}
+
+path { transition: fill .25s ease; }

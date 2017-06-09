@@ -1,0 +1,8 @@
+.well {
+	@include pull-up-down-content();
+	
+	margin-bottom: pad('md');
+	padding: pad('sm');
+	border-radius: 4px;
+	background-color: color('primary-lt');
+}

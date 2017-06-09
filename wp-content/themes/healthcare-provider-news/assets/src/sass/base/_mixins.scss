@@ -1,0 +1,87 @@
+/**
+ * 
+ * Responsive layout/breakpoint mixins
+ * Philosophy outlined here:
+ * https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862
+ *
+ **/
+
+@mixin for-small-phone-only {
+  @media (max-width: 400px) { @content; }
+}
+@mixin for-big-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 870px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+
+/**
+ * 
+ * Relies on the $pad map specified in _variables.scss
+ *
+ **/
+
+@function pad($size) {
+
+  @if map-has-key($pad, $size) {
+    @return map-get($pad, $size);
+  }
+
+	@warn "Unfortunately, no value could be retrieved from `#{$size}`. " + "Please make sure it is defined in the $pad map.";
+	@return null;
+
+}
+
+
+/**
+ * 
+ * Relies on the $color map specified in _variables.scss
+ *
+ **/
+@function color($color) {
+
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  }
+
+	@warn "Unfortunately, no value could be retrieved from `#{$colors}`. " + "Please make sure it is defined in the $colors map.";
+	@return null;
+
+}
+
+
+/**
+ *
+ *
+ * @author Adam Meyer <dev@apmeyer.com>
+ */
+@mixin pull-up-down-content() {
+  > *:first-child { margin-top: 0 !important; }
+  > *:last-child { margin-bottom: 0 !important; }
+}
+
+
+
+/**
+ *
+ *
+ * @author Adam Meyer <dev@apmeyer.com>
+ */
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,154 @@
+{
+    "key": "group_591223e2bd580",
+    "title": "Byline and Contact Information",
+    "fields": [
+        {
+            "key": "field_593034491ac06",
+            "label": "Byline",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5930345f1ac08",
+            "label": "Byline",
+            "name": "post_byline",
+            "type": "textarea",
+            "instructions": "Max 60 characters",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 60,
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_593034571ac07",
+            "label": "Contact",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_591223ed112d1",
+            "label": "Use default or custom?",
+            "name": "post_contact_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "default": "Default Contact Info",
+                "custom": "Use a Custom Contact"
+            },
+            "default_value": [
+                "default"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_591224b0ed10d",
+            "label": "Custom Email Address",
+            "name": "post_contact_custom_email",
+            "type": "email",
+            "instructions": "This email address will be used in place of the default email address",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_591223ed112d1",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_591224d0ed10e",
+            "label": "Custom CC Recipient",
+            "name": "post_contact_custom_cc",
+            "type": "email",
+            "instructions": "A CC email address is optional",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_591223ed112d1",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1496332055
+}

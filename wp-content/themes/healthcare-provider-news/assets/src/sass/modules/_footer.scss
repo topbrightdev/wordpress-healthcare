@@ -1,0 +1,50 @@
+.footer-wrap {
+	background-color: #222222;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	box-shadow: inset 0 7px 24px -7px rgba(0,0,0,0.8);
+}
+
+.footer {
+	@include container();
+	padding: pad('lg') 0;
+	color: #ffffff;
+
+	&__message { padding-bottom: pad('md'); }
+
+	&__form {
+
+		.gform_wrapper {
+			margin: 0;
+
+			input[type=text], textarea { border: none; }
+
+			.gfield:first-child { margin-top: 0; }
+		}
+	}
+
+	.gform_confirmation_wrapper {
+		text-align: center;
+		font-weight: 700;
+		padding: pad('md') 0;
+		border-radius: 3px;
+		color: color('text');
+		background-color: rgba(255,255,255,0.7);
+		line-height: 140%;
+	}
+
+	@include for-tablet-landscape-up() {
+
+		&__message {
+			@include span(5 of 12);
+			margin-bottom: 0;
+		}
+
+		&__form {
+			@include span(7 of 12 last);
+		}
+
+	}
+
+}

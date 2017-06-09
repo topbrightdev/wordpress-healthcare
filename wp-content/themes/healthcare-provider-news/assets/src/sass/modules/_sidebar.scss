@@ -1,0 +1,25 @@
+.sidebar-thumb {
+	@include pull-up-down-content();
+	margin-top: pad('lg');
+	margin-bottom: pad('lg');
+
+	img {
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		height: auto;
+		margin: 0 auto pad('sm');
+	}
+
+	&__caption {
+		max-width: 400px;
+		color: color('text-lt');
+		margin: 0 auto;
+		font-size: .8em;
+	}
+
+	@include for-tablet-landscape-up() {
+		margin-top: 0;
+	}
+
+}
