@@ -468,11 +468,12 @@ class HPN_Theme {
 		}
 
 		$locations = get_nav_menu_locations();
-		$id = $locations[$location];
 
-		if (!$id) {
+		if ( !array_key_exists($location,$locations) ) {
 			return;
 		}
+
+		$id = $locations[$location];
 
 		$transient_name = 'ccpn_menu_'.$id;
 
