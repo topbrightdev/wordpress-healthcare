@@ -828,4 +828,26 @@ class HPN_Theme {
 	}
 
 
+
+	/**
+	 *
+	 *	Get the logo specified in the customizer or return a placeholder
+	 *	
+	 *	@param 		...
+	 *	@return 	...
+	 **/
+	public static function get_customizer_logo()
+	{
+		$logo = get_custom_logo();
+
+		if ($logo) {
+			echo $logo;
+		} else {
+			echo '<a href="'.site_url().'"><img src="'.get_template_directory_uri().'/assets/dist/img/logo-placeholder.png" alt="Placeholder Logo" /></a>';
+		}
+
+	}
+
+
+
 }

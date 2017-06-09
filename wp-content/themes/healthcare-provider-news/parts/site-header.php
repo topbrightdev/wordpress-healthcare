@@ -61,7 +61,7 @@
 	</div>
 
 	<div class="header__logo">
-		<?php the_custom_logo(); ?>
+		<?php HPN_Theme::get_customizer_logo(); ?>
 	</div>
 
 </header>
