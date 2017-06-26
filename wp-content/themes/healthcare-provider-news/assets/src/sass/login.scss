@@ -5,6 +5,18 @@ h1, #backtoblog  { display: none; }
 	text-align: center;
 }
 
+.pn-auth0-login {
+
+	#login {
+		padding-bottom: 75px;
+		background-image: url('../img/a0-badge-light.png');
+		background-position: bottom center;
+		background-repeat: no-repeat;
+		background-size: 150px auto;
+	}
+
+}
+
 .auth0-lock.auth0-lock .auth0-lock-name { line-height: 130% !important; }
 .auth0-lock.auth0-lock .auth0-lock-header { background-color: #ffffff !important; }
 .auth0-lock.auth0-lock .auth0-lock-header-bg { background-color: rgba(241, 241, 241, 1) !important; }
