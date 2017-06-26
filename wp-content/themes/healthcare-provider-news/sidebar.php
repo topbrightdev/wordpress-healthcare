@@ -27,7 +27,11 @@
 			</button>
 		</div>
 
-		<?php if (!$filters && !$categories) { _e('Menus not yet configured.',HPN_NAMESPACE); } ?>
+		<?php if (!$filters && !$categories) { ?>
+			<div class="wysiwyg">
+				<p><?php _e('Menus not yet configured.',HPN_NAMESPACE); ?></p>
+			</div>
+		<?php } ?>
 
 		<?php if ($filters) : ?>
 			<h4 class="h4 mb-0-5"><?php echo HPN_Theme::get_sidebar_menu_title('filter_menu'); ?></h4>
