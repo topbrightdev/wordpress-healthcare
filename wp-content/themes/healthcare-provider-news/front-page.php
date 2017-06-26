@@ -43,6 +43,12 @@
 
 				<?php endforeach; ?>
 				
+				<?php if ( count($categories) === 0 ) { ?>
+					<div class="wysiwyg">
+						<p><?php _e('No categories have been configured. Add categories and then categorize posts within those categories.'); ?></p>
+					</div>
+				<?php } ?>
+				
 			</div>
 
 			<div class="layout-a__sidebar">
